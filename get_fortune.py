@@ -9,4 +9,10 @@ for index, fortune in enumerate(fortunes):
 
 choice = int(input()) - 1
 
-print(MSG_PREFIX + fortunes[choice])
+message = MSG_PREFIX + fortunes[choice]
+request = requests.post(url = GME_URL, json = {
+    "message": {
+            "source_guid": str(hash(message)),
+            "text": message
+        }
+    })
