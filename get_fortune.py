@@ -8,3 +8,7 @@ fortunes      = map(lambda req: req.json(), api_responses)
 
 for index, fortune in enumerate(fortunes):
     print(f"{index + 1}: {fortune}")
+
+choice = int(input()) - 1
+
+print(fortunes[choice])
