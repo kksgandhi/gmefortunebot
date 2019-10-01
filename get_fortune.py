@@ -9,4 +9,4 @@ for index, fortune in enumerate(fortunes):
 
 choice = int(input()) - 1
 
-print(fortunes[choice])
+print(MSG_PREFIX + fortunes[choice])
