@@ -1,7 +1,5 @@
 import requests
-
-FORTUNE_URL  = 'https://helloacm.com/api/fortune'
-NUM_FORTUNES = 5
+from config import *
 
 api_responses = [requests.get(FORTUNE_URL) for _ in range(NUM_FORTUNES)]
 fortunes      = list(map(lambda req: req.json(), api_responses))
